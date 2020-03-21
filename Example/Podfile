@@ -2,26 +2,27 @@ use_frameworks!
 platform :ios, '9.0'
 
 target 'CCPAConsentViewController_Example' do
-  pod 'CCPAConsentViewController', :path => '../'
+  pod 'CCPAConsentViewController','1.1.3'
+  pod 'ConsentViewController', '4.1.4'
 end
 
 target 'CCPAConsentViewController_ExampleTests' do
-  pod 'CCPAConsentViewController', :path => '../'
+  pod 'CCPAConsentViewController', '1.1.3'
   pod 'Quick'
   pod 'Nimble'
 end
 
 target 'AuthExample' do
-  pod 'CCPAConsentViewController', :path => '../'
+  pod 'CCPAConsentViewController', '1.1.3'
 end
 
 target 'SourcePointMetaApp' do
-  pod 'CCPAConsentViewController', :path => '../'
+  pod 'CCPAConsentViewController', '1.1.3'
   pod 'IQKeyboardManagerSwift'
 end
 
 target 'SourcePointMetaAppTests' do
   inherit! :search_paths
   # Pods for testing
-  pod 'CCPAConsentViewController', :path => '../'
+  pod 'CCPAConsentViewController', '1.1.3'
 end
