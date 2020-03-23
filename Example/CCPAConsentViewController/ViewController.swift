@@ -72,6 +72,3 @@ class ViewController: UIViewController, ConsentDelegate, GDPRConsentDelegate {
         gdpr.loadMessage()
     }
 }
-
-
-{"mmsCookies":["_sp_v1_uid=1:131:5a42671e-5320-467a-8f2c-f82efc5f3035;","_sp_v1_csv=1;","_sp_v1_lt=1:msg|true:;","_sp_v1_ss=1:H4sIAAAAAAAAAItWqo5RKimOUbKKBjLyQAyD2lidGKVUEDOvNCcHyC4BK6iurVWKBQAW54XRMAAAAA%3D%3D;","_sp_v1_opt=1:;","_sp_v1_data=2:89576:1584794536:0:1:0:1:0:0:27753693-5f8c-4da6-b1f5-adde4488b1e8:114806;"],"messageId":"114806","dnsDisplayed":true,"status":"consentedAll"}"
