@@ -14,28 +14,28 @@ class ViewController: UIViewController, ConsentDelegate, GDPRConsentDelegate {
     
     let logger = Logger()
 
-    lazy var consentViewController: CCPAConsentViewController = { return CCPAConsentViewController(
-        accountId: 378,
-        propertyId: 4074,
-        propertyName: try! PropertyName("vice.ios.app"),
-        PMId: "5e19063e6468c12231c899a8",
-        campaignEnv: .Stage,
+    lazy var ccpa: CCPAConsentViewController = { return CCPAConsentViewController(
+        accountId: 22,
+        propertyId: 7480,
+        propertyName: try! PropertyName("twosdks.demo"),
+        PMId: "5e6a7f997653402334162542",
+        campaignEnv: .Public,
         targetingParams: ["SDK_TYPE":"CCPA"],
         consentDelegate: self
     )}()
     
     lazy var gdpr: GDPRConsentViewController = { return GDPRConsentViewController(
-        accountId: 378,
-        propertyId: 4074,
-        propertyName: try! GDPRPropertyName("vice.ios.app"),
-        PMId: "5e19063e6468c12231c899a8",
-        campaignEnv: .Stage,
+        accountId: 22,
+        propertyId: 7480,
+        propertyName: try! GDPRPropertyName("twosdks.demo"),
+        PMId: "5e6a80616146a00ea27a9153",
+        campaignEnv: .Public,
         targetingParams: ["SDK_TYPE":"GDPR"],
         consentDelegate: self
     )}()
     
     func ccpaConsentUIWillShow() {
-        present(consentViewController, animated: true, completion: nil)
+        present(ccpa, animated: true, completion: nil)
     }
     
     func gdprConsentUIWillShow() {
@@ -63,12 +63,12 @@ class ViewController: UIViewController, ConsentDelegate, GDPRConsentDelegate {
     }
 
     @IBAction func onPrivacySettingsTap(_ sender: Any) {
-        consentViewController.loadPrivacyManager()
+        gdpr.loadPrivacyManager()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        consentViewController.loadMessage()
+        ccpa.loadMessage()
         gdpr.loadMessage()
     }
 }
